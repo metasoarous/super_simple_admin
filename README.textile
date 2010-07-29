@@ -6,6 +6,12 @@ This is still a work in progress, so don't expect too detailed instructions just
 
 h2. Basic Usage
 
+Firstly, install the gem by running 
+
+bc. sudo gem install super_simple_admin
+
+You'll have to make sure that gemcutter is listed in your gem sources.
+
 In your ApplicationController do
 
 bc. class ApplicationController
