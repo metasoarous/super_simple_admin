@@ -12,7 +12,7 @@ module SuperSimpleAdmin
     :login_success_message => "Successfully logged in",
     :login_success_redirect => "/",
     :login_failure_message => "Incorrect password",
-    :login_failure_redirect => "sessions/new",
+    :login_failure_redirect => "/sessions/new",
     :logout_message => "Logout successful",
     :logout_redirect => "/"
   }
