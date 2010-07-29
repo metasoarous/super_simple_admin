@@ -2,7 +2,7 @@ h1. Super Simple Admin README
 
 Super Simple Authentication is a gem which makes it super easy to encapsulate the behavior of the Ryan Bates screen cast on super simple authentication.
 
-This is still a work in progress, so don't expect too detailed instructions just yet. I'll update as things move forward.
+This is still very fresh off the press, so any and all feedback is greatly appreciated.
 
 h2. Basic Usage
 
@@ -90,4 +90,4 @@ These are the ideas I have for improvements. If you feel inspired to help with a
 
 h3. Fixes
 
-* Add @helper_method :admin@ to ApplicationController
+None needed right now, but please update me if you discover anything.
