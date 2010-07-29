@@ -1,0 +1,87 @@
+h1. Super Simple Admin README
+
+Super Simple Authentication is a gem which makes it super easy to encapsulate the behavior of the Ryan Bates screen cast on super simple authentication.
+
+This is still a work in progress, so don't expect too detailed instructions just yet. I'll update as things move forward.
+
+h2. Basic Usage
+
+In your ApplicationController do
+
+bc. class ApplicationController
+	include SuperSimpleAdmin::ApplicationController
+end
+
+Create a sessions controller that looks like this
+
+bc. class SessionsController
+	include SuperSimpleAdmin::SessionsController
+end
+
+Now create a app/views/sessions/new.html.haml file (you are using haml, aren't you?) that looks something like this
+
+bc. #login_form
+	%p
+		- form_tag sessions_path do
+			= label_tag :password, "Password:"
+			= password_field_tag :password
+			= submit_tag "Submit"
+
+You can now use the @admin?@ helper method in any of your views to change what website users see based on whether they are logged in and also use @authorize@ in before filters in your controllers to restrict access as you see fit.
+
+And that's it!
+
+h2. Customization, configuration and defaults
+
+So you're probably wondering how to customize this bugger. There are two easy ways to do this, and both are perfectly acceptable are interoperable. However, there are defaults for everything so that you can get up and running without having to think. You'll obviously at least want to set your own password once in production though.
+
+h3. Hash access
+
+The innards of this gem refer to the @SuperSimpleAdmin.config@ hash for all of the configurable settings. As such (by way of example), you can specify or access settings like this
+
+bc. SuperSimpleAdmin.config[:password] = "verysecret"
+SuperSimpleAdmin.config[:password] == params[:password]
+
+Cake right?
+
+h3. Configuration file
+
+When the parent SuperSimpleAdmin module is loaded it looks to see if there is a admin_config.yml file in your config directory and if there is loads it up for you. Anything set here will override gem defaults. This is only loaded once though, which means you can still use hash access later on in your code to modify config parameters (as above).
+
+Environment independent settings are specified within all_environments, while environment specific setting are set within @RAILS_ENV@ as below
+
+bc. all_environments:
+	password: somewhatsecret
+	unauthorization_message: "You are not authorized to view this page"
+production:
+	password: verysecret
+
+
+h3. Defaults
+
+The default options are as follows
+
+bc. SuperSimpleAdmin.config = {
+  :password => "secret",
+  :unauthorized_message => "Unauthorized access",
+  :unauthorized_redirect => "/",
+  :login_success_message => "Successfully logged in",
+  :login_success_redirect => "/",
+  :login_failure_message => "Incorrect password",
+  :login_failures_redirect => "sessions/new",
+  :logout_message => "Logout successful",
+  :logout_redirect => "/"
+}
+
+h2. TODO
+
+These are the ideas I have for improvements. If you feel inspired to help with any of them, fork and send a request. I'd especially appreciate help with speccing, as I have no experience speccing gems (even a shove in the right direction here would be great).
+
+* Want to have a generator for the new sessions page.
+* Consider if there is a way to be more supportive of gems like cancan
+* Auto setup of login and logout routes
+* Specs
+
+h3. Fixes
+
+* Add @helper_method :admin@ to ApplicationController
