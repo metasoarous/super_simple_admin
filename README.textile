@@ -20,7 +20,7 @@ end
 
 Create a sessions controller that looks like this
 
-bc. class SessionsController
+bc. class SessionsController < ApplicationController
 	include SuperSimpleAdmin::SessionsController
 end
 
@@ -81,12 +81,12 @@ bc. SuperSimpleAdmin.config = {
 
 h2. TODO
 
-These are the ideas I have for improvements. If you feel inspired to help with any of them, fork and send a request. I'd especially appreciate help with speccing, as I have no experience speccing gems (even a shove in the right direction here would be great).
+These are the ideas I have for improvements. If you feel inspired to help with any of them, fork and send a request. I'd especially appreciate help with speccing, as I'm still pretty new to speccing out gems.
 
 * Want to have a generator for the new sessions page.
 * Consider if there is a way to be more supportive of gems like cancan
 * Auto setup of login and logout routes
-* Specs
+* Specs (sorry - when this was started, I didn't know how to spec rails gems, and I haven't had time yet to go back and spec)
 
 h3. Fixes
 

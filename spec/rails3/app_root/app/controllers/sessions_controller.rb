@@ -1,0 +1,3 @@
+class SessionsController
+	include SuperSimpleAdmin::SessionsController
+end

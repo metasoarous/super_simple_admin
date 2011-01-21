@@ -20,7 +20,7 @@ module SuperSimpleAdmin
   # admin_config.yml file if there is one and overrides any default
   # values set above
   begin
-    raw_config = File.read(RAILS_ROOT + "/config/admin_config.yml")
+    raw_config = File.read(Rails.root.to_s + "/config/admin_config.yml")
     yml = YAML.load(raw_config)
     @config.merge yml["all_environments"].symbolize_keys
     @config.merge yml[RAILS_ENV].symbolize_keys

@@ -1,0 +1,6 @@
+#login_form
+	%p
+		- form_tag sessions_path do
+			= label_tag :password, "Password:"
+			= password_field_tag :password
+			= submit_tag "Submit"
