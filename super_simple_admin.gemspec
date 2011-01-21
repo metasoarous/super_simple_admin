@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{super_simple_admin}
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["metasoarous"]
-  s.date = %q{2011-01-08}
+  s.date = %q{2011-01-21}
   s.description = %q{Provides super simple authentication al a Ryan Bates old screen cast. Creates admin access feature which allows for a single password login for admin tool access.}
   s.email = %q{metasoarous@gmail.com}
   s.extra_rdoc_files = [
@@ -21,8 +21,59 @@ Gem::Specification.new do |s|
      "Changelog",
      "LICENSE",
      "README.textile",
+     "Rakefile",
      "VERSION",
      "lib/super_simple_admin.rb",
+     "pkg/super_simple_admin-0.2.1.gem",
+     "spec/rails3/Gemfile",
+     "spec/rails3/Gemfile.lock",
+     "spec/rails3/Rakefile",
+     "spec/rails3/app_root/.gitignore",
+     "spec/rails3/app_root/README",
+     "spec/rails3/app_root/app/controllers/application_controller.rb",
+     "spec/rails3/app_root/app/controllers/sessions_controller.rb",
+     "spec/rails3/app_root/app/helpers/application_helper.rb",
+     "spec/rails3/app_root/app/views/layouts/application.html.erb",
+     "spec/rails3/app_root/app/views/sessions/new.html.haml",
+     "spec/rails3/app_root/config.ru",
+     "spec/rails3/app_root/config/application.rb",
+     "spec/rails3/app_root/config/boot.rb",
+     "spec/rails3/app_root/config/database.yml",
+     "spec/rails3/app_root/config/environment.rb",
+     "spec/rails3/app_root/config/environments/development.rb",
+     "spec/rails3/app_root/config/environments/in_memory.rb",
+     "spec/rails3/app_root/config/environments/production.rb",
+     "spec/rails3/app_root/config/environments/test.rb",
+     "spec/rails3/app_root/config/initializers/backtrace_silencers.rb",
+     "spec/rails3/app_root/config/initializers/inflections.rb",
+     "spec/rails3/app_root/config/initializers/mime_types.rb",
+     "spec/rails3/app_root/config/initializers/secret_token.rb",
+     "spec/rails3/app_root/config/initializers/session_store.rb",
+     "spec/rails3/app_root/config/locales/en.yml",
+     "spec/rails3/app_root/config/routes.rb",
+     "spec/rails3/app_root/db/seeds.rb",
+     "spec/rails3/app_root/doc/README_FOR_APP",
+     "spec/rails3/app_root/lib/tasks/.gitkeep",
+     "spec/rails3/app_root/public/404.html",
+     "spec/rails3/app_root/public/422.html",
+     "spec/rails3/app_root/public/500.html",
+     "spec/rails3/app_root/public/favicon.ico",
+     "spec/rails3/app_root/public/images/rails.png",
+     "spec/rails3/app_root/public/index.html",
+     "spec/rails3/app_root/public/javascripts/application.js",
+     "spec/rails3/app_root/public/javascripts/controls.js",
+     "spec/rails3/app_root/public/javascripts/dragdrop.js",
+     "spec/rails3/app_root/public/javascripts/effects.js",
+     "spec/rails3/app_root/public/javascripts/prototype.js",
+     "spec/rails3/app_root/public/javascripts/rails.js",
+     "spec/rails3/app_root/public/robots.txt",
+     "spec/rails3/app_root/public/stylesheets/.gitkeep",
+     "spec/rails3/app_root/public/stylesheets/scaffold.css",
+     "spec/rails3/app_root/script/rails",
+     "spec/rails3/spec.opts",
+     "spec/rails3/spec_helper.rb",
+     "spec/rails3/super_simple_admin_spec.rb",
+     "super_simple_admin-0.2.1.gem",
      "super_simple_admin.gemspec"
   ]
   s.homepage = %q{http://www.thoughtnode.com}
