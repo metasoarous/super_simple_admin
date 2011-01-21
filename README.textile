@@ -35,6 +35,8 @@ bc. #login_form
 
 You can now use the @admin?@ helper method in any of your views to change what website users see based on whether they are logged in and also use @authorize@ in before filters in your controllers to restrict access as you see fit.
 
+Oh - and one last thing. You'll also want to add some routes in your routes.rb file for the sessions_path to work, as well as for nice login route so that the @/login@ and @/logout@ paths do what you would expect.
+
 And that's it!
 
 h2. Customization, configuration and defaults
