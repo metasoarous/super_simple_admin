@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{super_simple_admin}
-  s.version = "0.2.4"
+  s.version = "0.2.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["metasoarous"]
@@ -38,6 +38,7 @@ Gem::Specification.new do |s|
     "spec/rails3/app_root/app/views/layouts/application.html.erb",
     "spec/rails3/app_root/app/views/sessions/new.html.haml",
     "spec/rails3/app_root/config.ru",
+    "spec/rails3/app_root/config/admin_config.yml",
     "spec/rails3/app_root/config/application.rb",
     "spec/rails3/app_root/config/boot.rb",
     "spec/rails3/app_root/config/database.yml",
