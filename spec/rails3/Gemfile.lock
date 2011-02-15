@@ -1,13 +1,13 @@
 PATH
-  remote: /Users/cts/code/super_simple_admin
+  remote: ../..
   specs:
-    super_simple_admin (0.2.1)
+    super_simple_admin (0.2.2)
       RedCloth
 
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.3)
+    RedCloth (4.2.7)
     abstract (1.0.0)
     actionmailer (3.0.2)
       actionpack (= 3.0.2)
