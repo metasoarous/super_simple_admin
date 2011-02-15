@@ -16,24 +16,26 @@ module SuperSimpleAdmin
     :logout_message => "Logout successful",
     :logout_redirect => "/"
   }
-  # This sets the Admin variables based off of the values set in the
-  # admin_config.yml file if there is one and overrides any default
-  # values set above
-  begin
-    raw_config = File.read(Rails.root.to_s + "/config/admin_config.yml")
-    yml = YAML.load(raw_config)
-    @config.merge! yml["all_environments"].symbolize_keys
-    if yml[Rails.env]
-    	@config.merge! yml[Rails.env].symbolize_keys
-    end
-  rescue Errno::ENOENT
-  end
   
   # Load this module into your application controller
   module ApplicationController
     # Sets up the admin? helper method for use in views
     def self.included(controller)
       controller.send :helper_method, :admin?
+      # This sets the Admin variables based off of the values set in the
+			# admin_config.yml file if there is one and overrides any default
+			# values set above
+      begin
+				raw_config = File.read(Rails.root.to_s + "/config/admin_config.yml")
+				yml = YAML.load(raw_config)
+				if yml["all_environments"]
+					SuperSimpleAdmin.config.merge! yml["all_environments"].symbolize_keys
+				end
+				if yml[Rails.env]
+					SuperSimpleAdmin.config.merge! yml[Rails.env].symbolize_keys
+				end
+			rescue Errno::ENOENT
+			end
     end
     protected
     # This method can be used in before 

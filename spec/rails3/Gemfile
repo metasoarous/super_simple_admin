@@ -7,6 +7,11 @@ gem 'rspec-rails'
 gem 'ruby-debug'
 gem "haml"
 
+
+gem "cucumber-rails"
+gem "cucumber"
+gem "capybara"
+
 gem "super_simple_admin", :path => "../.."
 
 # Bundle edge Rails instead:

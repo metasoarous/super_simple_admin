@@ -1,6 +1,6 @@
 all_environments:
    password: secret
-   unauthorized_message: "You are note authorized to perform this action"
+   unauthorized_message: "You are not authorized to perform this action"
    login_failure_message: "Incorrect password - please try again"
 production:
    password: supersecret
