@@ -89,6 +89,8 @@ These are the ideas I have for improvements. If you feel inspired to help with a
 * Consider if there is a way to be more supportive of gems like cancan
 * Auto setup of login and logout routes
 * Specs (sorry - when this was started, I didn't know how to spec rails gems, and I haven't had time yet to go back and spec)
+* Cucumber steps for logging in
+* An install rake task which maybe sets up the routes as well as the config file.
 
 h3. Fixes
 
