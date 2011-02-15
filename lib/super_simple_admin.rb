@@ -22,8 +22,8 @@ module SuperSimpleAdmin
   begin
     raw_config = File.read(Rails.root.to_s + "/config/admin_config.yml")
     yml = YAML.load(raw_config)
-    @config.merge yml["all_environments"].symbolize_keys
-    @config.merge yml[Rails.env].symbolize_keys
+    @config.merge! yml["all_environments"].symbolize_keys
+    @config.merge! yml[Rails.env].symbolize_keys
   rescue Errno::ENOENT
   end
   
