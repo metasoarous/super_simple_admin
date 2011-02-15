@@ -95,4 +95,4 @@ These are the ideas I have for improvements. If you feel inspired to help with a
 
 h3. Fixes
 
-* Seem to be having trouble specifying :login_failure_message from the config file
+* Seem to be having trouble specifying :login_failure_message from the config file (fixed - 02/14)
